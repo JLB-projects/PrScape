@@ -17,9 +17,11 @@ As a final note before moving on to the actual gameplay: the world building was 
 - 150+ Unique enemies to fight
 - 100+ NPCs to interact with, including multiple quests to complete
 - 250+ Items to collect 
+
 All of which is spread over more than 150 areas ready to be explored. 
 
 Try playing in different ways from the start by taking advantage of the multi-account support and creating many new characters. 
+
 Jump straight into an in-depth tutorial which will get you up to speed, or brave the unknown with the option to skip it entirely (coming soon™).
 
 
@@ -27,6 +29,7 @@ Jump straight into an in-depth tutorial which will get you up to speed, or brave
 Interaction with the game is done entirely through button presses which are presented to the user depending on their current progress and activity. Feedback is given in the form of an in-game text console primarily, but interface elements like labels, buttons or other text containers provide information and keep track of the user's data.
 
 The behaviour of certain buttons may also change as the user progresses, switches activities or selects an option through a different button.
+
 There is potential for more precise control of certain things via text input in future. 
 
 
