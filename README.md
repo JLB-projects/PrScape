@@ -13,4 +13,31 @@ As a final note before moving on to the actual gameplay: the world building was 
 
 
 # Game Overview 
-Test
+- 14 Skills to train
+- 150+ Unique enemies to fight
+- 100+ NPCs to interact with, including multiple quests to complete
+- 250+ Items to collect 
+All of which is spread over more than 150 areas ready to be explored. 
+
+Try playing in different ways from the start by taking advantage of the multi-account support and creating many new characters. 
+Jump straight into an in-depth tutorial which will get you up to speed, or brave the unknown with the option to skip it entirely (coming soon™).
+
+
+# User Experience / How to play
+Interaction with the game is done entirely through button presses which are presented to the user depending on their current progress and activity. Feedback is given in the form of an in-game text console primarily, but interface elements like labels, buttons or other text containers provide information and keep track of the user's data.
+
+The behaviour of certain buttons may also change as the user progresses, switches activities or selects an option through a different button.
+There is potential for more precise control of certain things via text input in future. 
+
+
+# Skills
+Skills can be split into 3 main categories: Combat, Gathering, and Production. The skills within each category are generally trained in a similar fashion. Combat skills require you to kill things, with the specific skill depending on weapon and style choices. Gathering skills are trained by collecting raw resources from trees, rocks or fishing. Production skills generally process the items gained from gathering, or otherwise obtained from shops or combat, and create new potentially useful items.
+
+The underlying system is the same for each of the gathering skills, and the same is true for combat. Production skills tend to be more complex in design, differing from each other in interface style and certain training options.
+
+At its core 'skilling' is simply the process of performing an action, gaining experience in a given skill for that action, and then eventually doing this enough to reach an experience milestone corresponding to a new level. Levelling up unlocks new things to do with a skill, and may also unlock access to further areas or quests.
+
+
+# Items
+TBC
+
