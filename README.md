@@ -84,5 +84,6 @@ Upon starting the game, a choice is given to register or login. If registration 
 The tutorial explains every major aspect of the game, walking through an example of each activity. Interface elements are introduced slowly to avoid overburdening a new user. The tutorial builds up to a point where the user is given a basic quest to complete by themselves, encompassing most of the content, which unlocks the main game upon completion.
 
 
-
+# Changelog
+Rough list of major changes in chronological order, but no timestamps saved:
 
