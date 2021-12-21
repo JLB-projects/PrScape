@@ -59,7 +59,7 @@ The game world is split into areas, each containing a unique combination of enem
 Navigating between areas is simple: there are up to four directionally labeled buttons placed on appropriate sides of the window when a neighbouring area exists. In some areas there is an alternative way to travel, and an extra button will appear offering access to a non-neighbouring area. This form of transport may require certain items or payment to use.
 
 
-# Enemies
+# Combat
 Each area may contain a few types of enemy to fight. Combat allows you to level combat skills and often find valuable items as a reward. The world provides a wide range of enemy difficulties to give a sense of progression, with areas generally increasing in difficulty as you move further from the starting location. It is key to note that most high end combat equipment is uniquely obtained through difficult enemy encounters.
 
 > Combat in progress showing enemy information <
