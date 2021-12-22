@@ -68,9 +68,10 @@ Navigating between areas is simple: there are up to four directionally labeled b
 # Combat
 Each area may contain a few types of enemy to fight. Combat allows you to level combat skills and often find valuable items as a reward. The world provides a wide range of enemy difficulties to give a sense of progression, with areas generally increasing in difficulty as you move further from the starting location. It is key to note that most high end combat equipment is uniquely obtained through difficult enemy encounters.
 
-| ![Combat_example](https://user-images.githubusercontent.com/96324587/147043857-0f2fd9ef-20a5-4359-8488-d34cda1665ca.PNG) | 
+
+| ![Combat_example](https://user-images.githubusercontent.com/96324587/147045032-1656c3c3-2a87-494c-b178-7399f6478ed7.PNG) | 
 |:--:| 
-| *Fighting a Kalphite larva with a melee weapon.* |
+| *Fighting a Scorpion with a melee weapon.* |
 
 # NPCs + Quests
 NPCs = Non-player characters. These exist for you to talk to, trade with and complete quests. NPC owned shops allow you to access important items easily and obtain early upgrades much faster than production skills would allow, in exchange for gold. 
