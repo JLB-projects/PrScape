@@ -36,9 +36,8 @@ Jump straight into an in-depth tutorial which will get you up to speed, or brave
 # Skills
 Skills can be split into 3 main categories: Combat, Gathering, and Production. The skills within each category are generally trained in a similar fashion. Combat skills require you to kill things, with the specific skill depending on weapon and style choices. Gathering skills are trained by collecting raw resources from trees, rocks or fishing. Production skills generally process the items gained from gathering, or otherwise obtained from shops or combat, and create new potentially useful items.
 
-> Skill list image while cutting a tree
  ![Skill_list](https://user-images.githubusercontent.com/96324587/147042795-df45c086-91c6-46fc-a399-a1785dd97b24.PNG)
-
+> Cutting a tree while viewing the skills tab
 
 The underlying system is the same for each of the gathering skills, and the same is true for combat. Production skills tend to be more complex in design, differing from each other in interface style and certain training options.
 
