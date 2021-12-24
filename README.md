@@ -91,7 +91,7 @@ Quests, while limited in scope, provide something to do as a break from training
 
 Upon starting the game, a choice is given to register or login. If registration is chosen, then after entering a name and password the tutorial will begin. 
 
-<video src='https://www.youtube.com/watch?v=le1BLLInPfU' width=180/>
+[<img src="https://img.youtube.com/vi/le1BLLInPfU/maxresdefault.jpg" width="50%">](https://youtu.be/le1BLLInPfU)
 
 The tutorial explains every major aspect of the game, walking through an example of each activity. Interface elements are introduced slowly to avoid overburdening a new user. The tutorial builds up to a point where the user is given a basic quest to complete by themselves, encompassing most of the content, which unlocks the main game upon completion.
 
