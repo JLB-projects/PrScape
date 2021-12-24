@@ -86,7 +86,7 @@ Quests, while limited in scope, provide something to do as a break from training
 # Tutorial
 Upon starting the game, a choice is given to register or login. If registration is chosen, then after entering a name and password the tutorial will begin. 
 
-| [<img src="https://user-images.githubusercontent.com/96324587/147043985-11039c54-05df-4a4a-bab8-090c05da05f7.PNG" width="80%">](https://youtu.be/le1BLLInPfU) | 
+| [<img src="https://user-images.githubusercontent.com/96324587/147043985-11039c54-05df-4a4a-bab8-090c05da05f7.PNG" width="100%">](https://youtu.be/le1BLLInPfU) | 
 |:--:| 
 | *A sample play-through video of the tutorial. (Click to play)* |
 
@@ -94,6 +94,6 @@ The tutorial explains every major aspect of the game, walking through an example
 
 
 # Changelog
-Rough list of major changes in chronological order, but no timestamps saved:
+The following is a rough list of major updates in chronological order, but unfortunately timestamps were not saved.
 
 > Insert changelog here
