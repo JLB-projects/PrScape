@@ -378,7 +378,7 @@ class MyWindow:
                              command=print)
         self.style3 = Button(win, text='', font=('Helvetica bold', 16), bg="grey",
                              command=print)
-        self.curr_style = Label(win, text="Current style:\n"+user.att_style, bg='grey', font=('Helvetica bold', 16))
+        self.curr_style = Label(win, text="Current style:\n"+user.att_style, bg='grey', font=('Helvetica bold', 14))
         self.equip_item = Button(win, text="Equip", command=lambda: equip_item(user.inventory.curr_selection),
                                  bg='grey', font=('Helvetica bold', 16))
         self.drop_item = Button(win, text="Drop", command=lambda: drop_item(user.inventory.curr_selection),
@@ -754,15 +754,15 @@ def submit():
                  ON DELETE CASCADE
                  ON UPDATE NO ACTION)""")
         if mywin.reg_pass.winfo_viewable():
-            # Check for username availability to prevent duplicate usernames
+            # Check passwords match
             if mywin.reg_pass.get() != mywin.reg_pass2.get():
                 mywin.reg_warning_lbl.configure(text="Passwords don't match!")
                 mywin.reg_warning_lbl.place(relx=0.363, rely=0.85)
                 return
+            # Check for username availability to prevent duplicate usernames (case insensitive)
             user_name = mywin.reg_user.get()
             cur.execute("""SELECT username FROM user_profiles WHERE ? = username""", [user_name.lower()])
             rows = cur.fetchall()
-            print(rows)
             if rows:
                 # Username is already taken i.e query found a result
                 for row in rows:
@@ -1568,7 +1568,7 @@ def set_smith(num):
     if user.curr_item == Items[num]:
         return
     if user.skills['Smithing'][0] < bar_item.skill_reqs['Smithing']:
-        mywin.insert_text_thread(f"Smithing level is too low to smelt that.{num}", 'warning')
+        mywin.insert_text_thread(f"Smithing level is too low to smelt that.", 'warning')
         vars(mywin)['smith_item_' + str((num - 80) % 11)].deselect()
         user.curr_item = 0
         return
@@ -1747,6 +1747,11 @@ def cast_spell(spell):
             swap_area(spell.area, 'teleport')
             mywin.insert_text_thread(f"Teleporting to {Areas[spell.area].name}...\n", 'good')
             user.skills['Magic'][1] += spell.xp * global_xp_multiplier
+            while xp_to_next('Magic', True) <= 0 and user.skills['Magic'][0] != 99:
+                user.skills['Magic'][0] += 1
+                mywin.insert_text_thread(
+                    f"Congratulations! Your Magic is now level {user.skills['Magic'][0]}.",
+                    'good')
     else:
         # Placeholder in the case of non-teleport type spells in future
         user.skills['Magic'][1] += spell.xp * global_xp_multiplier
@@ -2935,7 +2940,7 @@ def list_equipment():
         display_equip_stats()
         update_inventory()
         if user.flags.get('tut_prog', 250) == 7:
-            user.flags.get['tut_prog'] = 8
+            user.flags['tut_prog'] = 8
 
 
 def list_inv():
@@ -5152,6 +5157,7 @@ def combat(enemy):
     mywin.enemy_fight["state"] = "disabled"
     user.eating = False
     # Set up all the interface elements
+    mywin.curr_style.configure(text="Current style:\n" + user.att_style)
     mywin.curr_style.place(relx=0.2, rely=0.5, relwidth=0.15, relheight=0.1)
     mywin.style1.place(relx=0.35, rely=0.45, relwidth=0.1, relheight=0.05)
     mywin.style2.place(relx=0.45, rely=0.45, relwidth=0.1, relheight=0.05)
@@ -5719,6 +5725,8 @@ def cook():
     update_inventory()
     list_cooking()
     user.curr_action = "idle"
+    if not user.inventory.is_cookable():
+        mywin.start_cook.place_forget()
     if user.flags.get('tut_prog', 250) == 26:
         user.flags['tut_prog'] = 27
         if burned:
@@ -6150,7 +6158,6 @@ def fletch():
     update_inventory()
     if not mywin.fletch_0.winfo_viewable():
         mywin.fletch_0.place(relx=0.1, rely=0.1, relwidth=0.01, relheight=0.01)
-    list_fletching([Items[3], 0, 0])
     mywin.start_fletch["state"] = "normal"
     if user.flags.get('tut_prog', 250) == 19:
         user.flags['tut_prog'] = 20
@@ -6158,6 +6165,7 @@ def fletch():
         user.flags['tut_prog'] = 21
     if user.flags.get('tut_prog', 250) == 21 and user.curr_item.id == 151:
         user.flags['tut_prog'] = 22
+    list_fletching([Items[3], 0, 0])
     user.curr_item = 0
 
 
@@ -6747,7 +6755,7 @@ def tutorial():
             mywin.start_fletch['state'] = 'disabled'
             time.sleep(2)
             mywin.insert_text_thread(f"\nNice arrows!\n\nFletching is the main way to get ammo and weaponry for "
-                                     f"Ranged combat. To finish this little introduction you should make a Shortbow."
+                                     f"Ranged combat. To finish this little introduction you should make a Shortbow.\n"
                                      f"\nUse the logs again but this time choose the Shortbow (u) option, which you've "
                                      f"been given the level for.")
             # Check free space again before adding an item
@@ -6755,7 +6763,7 @@ def tutorial():
                 user.inventory.add_to_inv(3)
             # Advance the user's level slightly so they can try making different items
             user.skills['Fletching'] = [5, 388]
-            time.sleep(4)
+            time.sleep(5)
             mywin.insert_text_thread(f"\nAfterwards, you can finish the process of making a full Shortbow by using the "
                                      f"fletch option on the un-strung Shortbow.")
             mywin.start_fletch['state'] = 'normal'
@@ -6976,11 +6984,11 @@ def tutorial():
                                      f" can buy and sell a selection of items for a fair price. If you haven't realised"
                                      f" by now, the universal currency in this world is gold pieces, which you can "
                                      f"gain through killing or selling primarily.")
-            time.sleep(5)
+            time.sleep(7)
             mywin.insert_text_thread(f"\nGenerally an item sells for 60% of the price you can buy it for, so don't "
                                      f"buy anything you won't use. The shop interface is similar to the bank, using the"
                                      f" same quantity options, but without the tabs.")
-            time.sleep(5)
+            time.sleep(6)
             mywin.insert_text_thread(f"\nOn the other hand, interacting with items is slightly different:"
                                      f"\nYou will be presented some options like getting the value of an item before "
                                      f"you sell, rather than selling items in a single press. This does not apply to "
@@ -7019,11 +7027,11 @@ def tutorial():
                 tut_area_1.enemies[1] = None_enemy
             mywin.insert_text_thread(f"\nYou've seen the basics, and it's almost time to give you full control, but "
                                      f"first the other function of NPCs will be introduced: Quests.")
-            time.sleep(4)
+            time.sleep(5)
             mywin.insert_text_thread(f"\nOften an NPC will have a task or series of tasks for you to complete, which "
                                      f"may involve killing enemies, visiting another NPC, or acquiring a selection of"
                                      f" items through whatever means necessary.")
-            time.sleep(4)
+            time.sleep(5)
             mywin.insert_text_thread(f"\nThese will sometimes require a minimum set of skill levels to begin, in order"
                                      f" to add a barrier to potential rewards or simply because the quest involves "
                                      f"using a certain skill.")
@@ -7031,7 +7039,7 @@ def tutorial():
             mywin.insert_text_thread(f"\nFinishing the entirety of a quest will reward you with relevant experience "
                                      f"in skills, along with gold or some useful items in some cases. Certain areas"
                                      f" may even be locked behind a quest completion. ")
-            time.sleep(4)
+            time.sleep(5)
             mywin.quest_obj.place(relx=0, rely=0.4, relwidth=0.1, relheight=0.05)
             flash_thread('quest_obj')
             mywin.insert_text_thread(f"\nKeeping track of all these tasks can get tricky, so you can check your "
@@ -7050,11 +7058,11 @@ def tutorial():
             time.sleep(4)
             mywin.insert_text_thread(f"\nFollow the given instructions to progress a quest, you can always return to "
                                      f"the NPC or check your quest info for a reminder.")
-            time.sleep(3)
+            time.sleep(4)
             mywin.insert_text_thread(f"\nNow you are on your own. All actions have been unlocked, and you can move "
                                      f"freely between the two tutorial areas. Use what you've learned to complete the "
-                                     f"quest given by the 'Man' in the western tutorial area.")
-            time.sleep(3)
+                                     f"quest given by the 'Man' in the eastern tutorial area.")
+            time.sleep(5)
             mywin.insert_text_thread(f"\nBe aware that any items in your inventory, equipment or bank will be deleted "
                                      f"when you finish the tutorial, but skill levels will remain.", 'warning')
             # Add the tutorial quest to the Man NPC
@@ -7094,7 +7102,7 @@ def tutorial():
 
             user.inventory = Inventory([83, 1], [85, 1], [151, 1], [76, 1],  [45, 1], [52, 1], [59, 1], [39, 1],
                                        [28, 1], [66, 100], [67, 100], [68, 100], [69, 100], [70, 100], [144, 100],
-                                       [12, 5])
+                                       [12, 1], [12, 1], [12, 1], [12, 1], [12, 1])
             user.bank = Bank(tab_1=Inventory([0, 25]))
             time.sleep(2)
             # Recommend cooks assistant quest to give user direction
@@ -7177,7 +7185,7 @@ def start_exit():
 window = Tk()
 mywin = MyWindow(window)
 window.configure(bg='#4f0781')
-window.title('PruneScape Client')
+window.title('PrScape Client')
 window.geometry("1080x720+100+200")
 window.resizable(False, False)
 # Set the default tab/quantity to 1 on startup, and depress default buttons
