@@ -99,27 +99,25 @@ The following is a rough list of updates in chronological order, but unfortunate
 ------
 
 Swapped experience generation to after each attack to fit better with weapon and attack style switching while in combat, instead of only calculating xp on kill. 
-Also reworked the combat process to account for changed attack speed and damage via weapon switching. Checks after each attack, can benefit from a quick to slow wep switch for 1 attack for example.
+Also reworked the combat process to account for changed attack speed and damage via weapon switching. Checks after each attack, can benefit from a quick to slow weapon switch for a single attack for example.
 
 Added a bunch of new items for equipment testing. 
 Added a 1hand / 2hand flag for weapons to prevent equipping shields with 2h weapons etc.
-Tested equip/inventory stuff eg. 2h weapons forces shield to be removed and  w/ full inv.
+Tested equip/inventory stuff eg. 2h weapons forces shield to be removed and prevents unequipping if full inventory.
 Added total equipment stats to equipment interface.
 
 Completely changed inventory algorithm: now moves each item over by one slot after removing an item to fill the space.
-Added functionality to keep inventory visible while restarting combat / skills multiple times for convenience.
+Added functionality to keep inventory visible while restarting combat or skills multiple times for convenience.
 
 Reworked combat formulas.
 Added skilling success formulas, skilling tools that improve these chances and added inventory checks before skilling to find highest tier tool.
 Added Progress bar for skilling.
 
 Added bank, using inventory objects as tabs to create 4 total bank tabs.
-Bank replaces most of the top console with the bank interface and adds quantity buttons for 1,5,10, all etc.
+Bank replaces most of the top console with the bank interface and adds quantity buttons for 1, 5, 10, 50, ALL.
 
-Added skills interface, which displays current skill levels and made sure that this updates whenever they gain xp.
-
-Added trade button to npc interface when selecting a trade-ready npc, which allows user to open the shop interface.
-
+Added skills interface, which displays current skill levels and updates whenever they gain experience.
+Added trade button to npc interface when selecting a shop NPC, which allows user to open the shop interface.
 
 In bank interface: inventory item behaviour changed to deposit on left click without showing the usual options. 
 Blocked bank opening while doing something since it changes the interface drastically. Inventory is now forced open during banking. 
@@ -146,8 +144,10 @@ Changed direction button commands so they can now only be used when idle.
 
 Reworked eating to work directly from inventory rather than selecting food and then pressing a separate eat button.
 
-Added fletching with various bows, arrows etc.
+Added smithing, consisting of separate smelting and smithing processes with unique interfaces. 
 Added hammer requirement to smithing (not the smelting portion).
+
+Added fletching with various bows, arrows etc. Requires a knife for certain actions.
 Changed bowstrings to be stackable for ease of use.
 Added knife/hammer/bowstring etc to basic shop so skills can be trained properly without relying on monster drops immediately.
 Now shows selected inventory item above the item's options. 
