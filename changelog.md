@@ -89,7 +89,7 @@ Added rings, amulets, gloves, capes, and shields for each style.
 Created a "World map" externally to plan areas and their connectivity to each other.\
 Added to map: Dungeons/islands: God wars, Dwarven mine, Zulrah island, Wizard guild, Karamja, Crandor, Troll stronghold. These are only accessible via a new transport option that allows travel to specific non-neighbouring areas.
 
-Added lots of new enemies and NPCS.\
+Added lots of new enemies and NPCs.\
 Added relevant shops to NPC list.
 
 Added clarity to areas that do not contain any enemies, NPCs or skill locations via a message.\
@@ -110,7 +110,7 @@ Fixed some bad combat formulas, may still need some perfecting in future.\
 Fixed bug where having no quests started allowed user to bypass all quest requirements.
 
 Changed the magic teleport spells to work with the new areas, adjusted level requirements, and added non-magic skill and quest requirements.\
-Added a way to check quest requirements: Upon talking to quest giver of an unavailable quest, gives current dialogue but also details the missing requirements in console.\
+Added a way to check quest requirements: Upon talking to quest giver of an unavailable quest, gives normal dialogue but also details the missing requirements in console.\
 Made some minor changes to text sizes to fit buttons better in extreme situations.
 
 Added a list of colours for backgrounds dependent on current area type: sandy for desert areas, dark green for swamps, blood red for vampire region, brown underground, grey mountains, and green for normal outdoor areas.\
