@@ -63,9 +63,9 @@ Added system for basic quests: simple dialogue with npcs, checks for items in in
 Added natural HP-regen over time for QOL.\
 Split up npcs, enemies etc into their own files to import for cleaner main file, before mass producing more of each type of object.
 
-Finished area_setup, can now be used with direction buttons, after logging in / tutorial, and more. 
+Finished area_setup, can now be used with direction buttons after logging in or during the tutorial. 
 
-Added a tutorial which slowly introduces basic features, runs through an example of each skill and combat style, and then guides the user through a basic quest.
+Added a tutorial which slowly introduces basic features, runs through an example of each skill / combat style, and then guides the user through a basic quest.
 
 Fixed a lot of shop bugs such as the selected item not being cleared after a sale in certain situations. This led to infinite gold.\
 Added daemon flag to ALL threads so there are never any errors of this type on closing. Checked each thread to make sure this doesn't break anything. 
@@ -75,9 +75,9 @@ Fixed console having an inconsistent scroll position on bank/shop opening.
 
 Added minor death mechanic: teleports user to spawnpoint on death, may change later to something more meaningful.
 
-Added primitive save/load features with text file reading/writing.\
+Added primitive save/load features via text file.\
 Changed save/load methods for custom objects so that they export as a string that can be used to reconstruct them, eg. the inventory saves as Inventory([0, 1], ... ).\
-Set up register / login interfaces, with fully functional account creation/login leading into the tutorial / current area.
+Added register / login interfaces, with fully functional account creation / login leading into the tutorial / current area.
 
 Added skilling nodes corresponding to each resource that is used in current skills.\
 Added equipment stats for smithed items, bows, arrows, weapons/armour.\
@@ -95,10 +95,10 @@ Added relevant shops to NPC list.
 Added clarity to areas that do not contain any enemies, NPCs or skill locations via a message.\
 Added combat style, combat level and more info to enemy details interface.\
 Changed enemy specific damage formulas since they don't have weapons/spells/armour like the player.\
-Added ability for NPCS to give quest items mid-quest, that may be required for later objectives in the same quest. These are deleted on quest completion and cannot be dropped or sold if they are a non-standard item that would be irretrievable. 
+Added ability for NPCS to give quest items mid-quest that may be required for later objectives in the same quest. These are deleted on quest completion and cannot be dropped or sold if they are a non-standard item that would be irretrievable. 
 
-Added "alt_drop_table" to some monsters to drop different items only during quests. The new items will usually be a quest item as above.\
-Added functionality to add/remove NPCs and enemies from a certain area dependent on user's quest progress. For example, completing "Romeo and juliet" will "kill" juliet, removing her from the area and hence the game. Completing a quest may also unlock a new enemy in this fashion.
+Added "alt_drop_table" to some monsters to drop different items only during quests. The new items will usually be quest items as above.\
+Added functionality to add/remove NPCs and enemies from a certain area dependent on user's quest progress. For example, completing "Romeo and Juliet" will kill Juliet, removing her from the area and hence the game. Completing a quest may also unlock a new enemy in this fashion.
 
 Added 3 basic quests.\
 Added all areas with their standard contents.\
@@ -109,11 +109,11 @@ Added some console messages on quest completion, detailing the rewards.\
 Fixed some bad combat formulas, may still need some perfecting in future.\
 Fixed bug where having no quests started allowed user to bypass all quest requirements.
 
-Changed the magic teleport spells to work with the new areas, adjusted level requirements, added non-magic skill and quest requirements.\
-Added a way to check quest requirements: Upon talking to quest giver of an unavailable quest, gives current dialogue but also details the missing requirements in console. \
+Changed the magic teleport spells to work with the new areas, adjusted level requirements, and added non-magic skill and quest requirements.\
+Added a way to check quest requirements: Upon talking to quest giver of an unavailable quest, gives current dialogue but also details the missing requirements in console.\
 Made some minor changes to text sizes to fit buttons better in extreme situations.
 
-Added a list of colours for backgrounds dependent on current area type: sandy for desert areas, dark green for swamps, blood red for vampire area, brown underground, grey mountains, and green for normal outdoor areas.\
+Added a list of colours for backgrounds dependent on current area type: sandy for desert areas, dark green for swamps, blood red for vampire region, brown underground, grey mountains, and green for normal outdoor areas.\
 Fixed some interface size / text problems with quests.\
 Standardised the font size for some commonly used interfaces.
 
