@@ -39,7 +39,7 @@ Added way to cook food, either by lighting a fire first or visiting an area cont
 Added way to select food in inventory as primary. Eat button will consume the selected food when pressed.
 
 Swapped some manual item removals for the new user.inventory.remove_item() method.\
-Top left part of interface now has furnace/anvil/range buttons etc in preparation for production skills. 
+Top left part of interface now has furnace/anvil/range buttons etc. in preparation for production skills. 
 
 Made furnace/anvil area specific rather than always available.\
 Area buttons now only show up if there is a neighbouring area in the relevant direction.\
@@ -54,7 +54,7 @@ Added hammer requirement to smithing (not the smelting portion).
 
 Added fletching with various bows, arrows etc. Requires a knife for certain actions.\
 Changed bowstrings to be stackable for ease of use.\
-Added knife/hammer/bowstring etc to basic shop so skills can be trained properly without relying on monster drops immediately.\
+Added knife/hammer/bowstring etc. to basic shop so skills can be trained properly without relying on monster drops immediately.\
 Now shows selected inventory item above the item's options.\
 Now auto-selects next copy of same item after drop/burn to allow smooth multi-drop/burn without repeatedly selecting the item.
 
