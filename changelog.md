@@ -3,12 +3,12 @@ The following is a rough list of updates in chronological order. Some things mig
 
 ------
 
-Swapped experience generation to after each attack to fit better with weapon and attack style switching while in combat, instead of only calculating xp on kill. 
-Also reworked the combat process to account for changed attack speed and damage via weapon switching. Checks after each attack, can benefit from a quick to slow weapon switch for a single attack for example.
+Swapped experience generation to after each attack to fit better with weapon and attack style switching while in combat, instead of only calculating xp on kill.\
+Also reworked the combat process to account for changed attack speed and damage via weapon switching. Now checks weapon data after each attack, and can benefit from a quick to slow weapon switch for a single attack for example.
 
-Added a bunch of new items for equipment testing. 
-Added a 1hand / 2hand flag for weapons to prevent equipping shields with 2h weapons etc.
-Tested equip/inventory stuff eg. 2h weapons forces shield to be removed and prevents unequipping if full inventory.
+Added a bunch of new items for equipment testing.\
+Added a 1hand / 2hand flag for weapons to prevent equipping shields with 2h weapons etc.\
+Tested equip/inventory stuff eg. 2h weapons forces shield to be removed and prevents unequipping if full inventory.\
 Added total equipment stats to equipment interface.
 
 Completely changed inventory algorithm: now moves each item over by one slot after removing an item to fill the space.
