@@ -58,10 +58,10 @@ Added knife/hammer/bowstring etc to basic shop so skills can be trained properly
 Now shows selected inventory item above the item's options.\
 Now auto-selects next copy of same item after drop/burn to allow smooth multi-drop/burn without repeatedly selecting the item.
 
-Added system for basic quests: simple dialogue with npcs, checks for items in inventory on completion, tracks monster kills, requires certain skill levels to start/finish a quest, provides rewards.
+Added system for basic quests: simple dialogue with NPCs, checks for items in inventory on completion, tracks monster kills, requires certain skill levels to start/finish a quest, provides rewards.
 
 Added natural HP-regen over time for QOL.\
-Split up npcs, enemies etc into their own files to import for cleaner main file, before mass producing more of each type of object.
+Split up NPCs, enemies etc. into their own files to import for cleaner main file, before mass producing more of each type of object.
 
 Finished area_setup, can now be used with direction buttons after logging in or during the tutorial. 
 
