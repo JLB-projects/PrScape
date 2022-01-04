@@ -56,7 +56,7 @@ Added fletching with various bows, arrows etc. Requires a knife for certain acti
 Changed bowstrings to be stackable for ease of use.\
 Added knife/hammer/bowstring etc to basic shop so skills can be trained properly without relying on monster drops immediately.\
 Now shows selected inventory item above the item's options.\
-Now auto-selects next copy of same item after drop/burn to allow smooth multi-drop/burn without repeatedly selecting the item.\
+Now auto-selects next copy of same item after drop/burn to allow smooth multi-drop/burn without repeatedly selecting the item.
 
 Added system for basic quests: simple dialogue with npcs, checks for items in inventory on completion, tracks monster kills, requires certain skill levels to start/finish a quest, provides rewards.
 
