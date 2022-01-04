@@ -52,7 +52,7 @@ There are lots of different kinds of items to find. Some can be equipped for use
 |:--:| 
 | *Looking at the inventory with logs selected.* |
 
-Items may be uniquely obtained through skills, enemies, or even bought from shops with gold in some cases. Collecting them is important to progress, like training production skills, completing quests and preparing for harder combat encounters.
+Items may be uniquely obtained through skills, enemies, or even bought from shops with gold in some cases. Collecting them is important to progress, since they are vital for training production skills, completing quests and preparing for harder combat encounters.
 
 
 # Areas
