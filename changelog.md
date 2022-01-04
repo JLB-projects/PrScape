@@ -27,7 +27,7 @@ Added trade button to npc interface when selecting a shop NPC, which allows user
 In bank interface: inventory item behaviour changed to deposit on left click without showing the usual options.\
 Blocked bank opening while doing something since it changes the interface drastically. Inventory is now forced open during banking.\
 Added bank specific add_to_inv functions and similar, allowing stacking of all items automatically.\
-Added shop, similar to bank: shows an inventory style ui, but without all 28 slots if not in use. Uses same quantity selectors as bank and shows prices on the item buttons.\ 
+Added shop, similar to bank: shows an inventory style ui, but without all 28 slots if not in use. Uses same quantity selectors as bank and shows prices on the item buttons.\
 Added deposit/sell all button, and last selected quantity is now saved until logout for bank and shop.
 
 Designed magic combat using runes and requiring a staff to cast spells. User's weapon now easily determines combat style.\
