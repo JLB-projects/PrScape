@@ -95,7 +95,7 @@ Added relevant shops to NPC list.
 Added clarity to areas that do not contain any enemies, NPCs or skill locations via a message.\
 Added combat style, combat level and more info to enemy details interface.\
 Changed enemy specific damage formulas since they don't have weapons/spells/armour like the player.\
-Added ability for NPCS to give quest items mid-quest that may be required for later objectives in the same quest. These are deleted on quest completion and cannot be dropped or sold if they are a non-standard item that would be irretrievable. 
+Added ability for NPCs to give quest items mid-quest that may be required for later objectives in the same quest. These are deleted on quest completion and cannot be dropped or sold if they are a non-standard item that would be irretrievable. 
 
 Added "alt_drop_table" to some monsters to drop different items only during quests. The new items will usually be quest items as above.\
 Added functionality to add/remove NPCs and enemies from a certain area dependent on user's quest progress. For example, completing "Romeo and Juliet" will kill Juliet, removing her from the area and hence the game. Completing a quest may also unlock a new enemy in this fashion.
@@ -110,7 +110,7 @@ Fixed some bad combat formulas, may still need some perfecting in future.\
 Fixed bug where having no quests started allowed user to bypass all quest requirements.
 
 Changed the magic teleport spells to work with the new areas, adjusted level requirements, and added non-magic skill and quest requirements.\
-Added a way to check quest requirements: Upon talking to quest giver of an unavailable quest, gives normal dialogue but also details the missing requirements in console.\
+Added a way to check quest requirements: upon talking to a quest giver of an unavailable quest, now shows the normal dialogue but also details the missing requirements in the console.\
 Made some minor changes to text sizes to fit buttons better in extreme situations.
 
 Added a list of colours for backgrounds dependent on current area type: sandy for desert areas, dark green for swamps, blood red for vampire region, brown underground, grey mountains, and green for normal outdoor areas.\
