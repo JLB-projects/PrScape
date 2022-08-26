@@ -1,5 +1,5 @@
 # Project: Scape
-Project: Scape. A minimalistic take on the classic version of popular game Runescape.
+Project: Scape. A minimalistic take on the classic version of popular game Runescape, used as a tool to practice core python skills.
 
 Primarily intended as a learning experience, I tried to avoid using major packages and especially game related ones that would trivialise the work needed. Since I don't plan on working with games much in the future, anything I learn about those specific packages would be useless. Instead I decided to build my own basic systems from the ground up, even if they aren't the best possible implementations, just to get a better feel for what is possible and efficient with basic python. 
 
